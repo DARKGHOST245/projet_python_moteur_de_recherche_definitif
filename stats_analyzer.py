@@ -30,3 +30,13 @@ def analyser_index(chemin_dossier):
 
     stats["Mots uniques"] = len(stats["Mots uniques"])
     return stats
+    # Exemple d'utilisation
+chemin = "TP"
+resultats = analyser_index(chemin)
+for cle, valeur in resultats.items():
+    if cle == "Fréquence des mots":
+        for m in valeur:
+            print(m)
+    else:
+        print(f"{cle}: {valeur}")
+
